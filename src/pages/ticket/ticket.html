@@ -1,0 +1,79 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+      <ion-buttons start>
+          <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    
+        </ion-buttons>
+    <ion-title>{{item.name}} | Grab A Ticket</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div class="ticket-box">
+        <h1>NOW SERVING</h1>
+        <h3>{{minimumNum}}</h3>
+  </div>
+  <div class="description">
+   <p>Grab The Next Available Tickets or <br>Book Your Tikcte By Using The Arrows</p>
+
+  </div>
+
+  <div class="content-card">
+    <ion-grid>
+        <ion-row>
+          <ion-col width-50>
+      <ion-card>
+       
+          <ion-card-header>
+            Ticket Number
+          </ion-card-header>
+          <ion-card-content>
+            {{randomTicket}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col width-50>
+          <ion-card>
+           
+              <ion-card-header>
+                Serving Time
+              </ion-card-header>
+              <ion-card-content>
+                <div *ngIf="onCheckMin;then content else other"> </div>
+                <ng-template #content>
+                {{randomHour}}:{{randomMin}} {{randomChar}}
+              </ng-template>
+
+              <ng-template #other>
+                 {{randomHour}}:0{{randomMin}} {{randomChar}}
+                </ng-template>
+                
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+      </ion-row>
+      </ion-grid>
+  </div>
+
+  <div class="button-incremental">
+
+      <button ion-button icon-left ion-button round outline (click)="onReduce()">
+          <ion-icon name="arrow-dropleft-circle"></ion-icon>
+          Prev
+        </button>
+
+        <button ion-button icon-right ion-button round outline (click)="onIncrease()">
+             Next
+            <ion-icon name="arrow-dropright-circle"></ion-icon>
+          </button>
+
+  </div>
+  <div class="button-confirm">
+<button ion-button  (click)="getMyTicket(randomTicket,randomHour,randomMin, randomChar,lowNum,item)" block>Confirm Ticket</button>
+</div>
+</ion-content>

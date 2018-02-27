@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+      <ion-buttons start>
+          <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    
+        </ion-buttons>
+    <ion-title>Institutions</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="card-background-page">
+
+  
+  <ion-card [navPush]="subInstitutions" *ngFor="let institutionItem of institutionList" [navParams]="institutionItem" >
+    
+     <img [src]="institutionItem.Image">
+      <div class="card-title">{{institutionItem.organization}}</div>
+      
+      <div padding-top class="card-subtitle">Listing Item {{institutionItem.suborganization.length}}</div>
+      
+
+  </ion-card>
+ 
+</ion-content>

@@ -1,0 +1,31 @@
+
+<ion-menu [content]="nav">
+
+    <ion-header>
+        <ion-toolbar >
+           <ion-title style="color:white">Menu</ion-title>
+
+        </ion-toolbar>
+    </ion-header>
+<ion-content>
+    <div class="profile">
+        <button  large>
+        <ion-icon class="contact" name="contact">
+        </ion-icon>
+    </button>
+    <h2>User</h2>
+    </div>
+    <ion-list class="menu-item">
+            <button ion-item (click)="onLoad(tabsPage)" style="color:#2c7080">
+                    <ion-icon  name="school" item-left></ion-icon>
+                    Institution
+                  </button>
+                  
+    </ion-list>
+
+</ion-content>
+
+
+</ion-menu>
+
+<ion-nav [root]="tabsPage" #nav></ion-nav>

@@ -1,0 +1,107 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+      <ion-buttons start>
+          <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    
+        </ion-buttons>
+    <ion-title>{{item.name}} | service</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class ="service-card">
+    <ion-grid>
+        <ion-row>
+           <ion-col>
+              <ion-card>
+                  
+                    <ion-card-header>
+                      Estimated Time you will be served
+                    </ion-card-header>
+                  
+                    <ion-card-content>
+                      {{bookedHour}}:{{bookMin}} {{chartime}}
+                    </ion-card-content>
+                  
+                  </ion-card>
+
+           </ion-col>
+
+        </ion-row>
+        <!--end of 1st row -->
+          <ion-row>
+
+              <ion-col width-50>
+                  <ion-card>
+                      
+                        <ion-card-header>
+                          Now Serving
+                        </ion-card-header>
+                      
+                        <ion-card-content>
+                          {{servedNum}}
+                        </ion-card-content>
+                      
+                      </ion-card>
+    
+               </ion-col>
+
+               <ion-col width-50>
+                  <ion-card>
+                      
+                        <ion-card-header>
+                          Your Ticket
+                        </ion-card-header>
+                      
+                        
+                      
+                        <ion-card-content>
+                            {{bookedTicket}}
+                        </ion-card-content>
+                      
+                      </ion-card>
+    
+               </ion-col>
+    
+    
+
+          
+        </ion-row>
+         <!--end of 2nd row -->
+        <ion-row>
+
+            <ion-col>
+                <ion-card>
+                    
+                      <ion-card-header>
+                        Number Of People Before You
+                      </ion-card-header>
+                    
+                      <ion-card-content>
+                        {{numdiff}}
+                      </ion-card-content>
+                    
+                    </ion-card>
+  
+             </ion-col>
+            
+                      
+                    </ion-row>
+                     <!--end of 3rd row -->
+        </ion-grid>
+      </div>
+
+      <div class="status">
+        
+        <p><span>Status: </span> Waiting on Line</p>
+         
+      </div>
+
+      <div class="button-cancel">
+          <button ion-button block (click)="onCancel()">Cancel a Ticket</button>
+      </div>
+</ion-content>

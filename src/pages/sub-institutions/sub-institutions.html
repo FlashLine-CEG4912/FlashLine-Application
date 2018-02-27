@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+      <ion-buttons start>
+          <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    
+        </ion-buttons>
+    <ion-title>{{institutionItem.organization}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <ion-list>
+    <button ion-item [navPush]="dashboard" [navParams]="item" *ngFor="let item of institutionItem.suborganization" >
+
+      <p>{{item.name}}</p>
+    </button>
+
+
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,38 @@
+page-service {
+
+
+    .service-card{
+
+        ion-card-header{
+            
+                            background: #4f8f9e;
+                            color: white
+                        }
+            
+                        ion-card-content{
+                            
+                            text-align: center;
+                             font-size: 18px;
+                            margin: 5px;
+                        }
+    }
+
+    .status{
+
+        span{
+            font-size: 20px;
+            font-weight: bold;
+            color:black;
+        }
+
+        p{
+            color: red;
+            font-size: 18px;
+        }
+    }
+
+    .button-cancel{
+
+        margin-top: 10%;
+    }
+}

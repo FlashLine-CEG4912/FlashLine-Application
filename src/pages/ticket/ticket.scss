@@ -1,0 +1,61 @@
+page-ticket {
+
+    .ticket-box{
+        
+             border: 25px solid #2c7080;
+             border-radius: 5%;
+             width: 60%;
+             height: 30%;
+             text-align: center;
+             margin-top: 5%;
+             margin-left: 20%;
+     
+             h1{
+                font-size: 15px;
+                color: white;
+                position: relative;
+                top:-17px;
+             }
+     
+             h3{
+                 font-size: 50px;
+                 margin-top: 10%;
+             }
+         }
+
+         .description{
+             p{
+                 text-align: center;
+                 font-size: 15px;
+             }
+         }
+
+         .content-card{
+
+
+            ion-card-header{
+
+                background: #4f8f9e;
+                color: white
+            }
+
+            ion-card-content{
+                
+                text-align: center;
+                 font-size: 20px;
+                margin: 10px;
+            }
+         }
+
+         .button-incremental{
+
+            text-align: center;
+
+        
+         }
+
+         .button-confirm{
+             
+            margin-top: 10%;
+         }
+}
